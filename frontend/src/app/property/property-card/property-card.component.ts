@@ -1,3 +1,4 @@
+import { IProperty } from './../../iproperty';
 import { Component, Input } from "@angular/core";
 
 //Component decorator will modify the behavior of the class but can also be used on properties of a class. It must also be declared in the app module
@@ -10,5 +11,5 @@ import { Component, Input } from "@angular/core";
   }
 )
 export class PropertyCardComponent{ //export is needed to use this class in other classes throught the use of import statements
-  @Input() CardInfo : any //this will allow us to insert any property we want from property-lists html. We also can use any name in card HTML as this will detect inconsistencies in runtime and not before
+  @Input() CardInfo : IProperty //this will allow us to insert any property we want from property-lists html. We also can use any name in card HTML as this will detect inconsistencies in runtime and not before. EDIT modified for IProperty as it has a template of the data we're actually gonna be using, allowing vscode to dish out errors if something is mistyped
 }
