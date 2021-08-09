@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 //Component decorator will modify the behavior of the class but can also be used on properties of a class. It must also be declared in the app module
 @Component({
@@ -10,10 +10,5 @@ import { Component } from "@angular/core";
   }
 )
 export class PropertyCardComponent{ //export is needed to use this class in other classes throught the use of import statements
-  Property: any ={
-    "Id":1,
-    "Name":"Birla House",
-    "Type":"House",
-    "Price":12000
-  } //con any podemos usar un objeto
+  @Input() CardInfo : any //this will allow us to insert any property we want from property-lists html. We also can use any name in card HTML as this will detect inconsistencies in runtime and not before
 }
