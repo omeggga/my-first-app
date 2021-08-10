@@ -15,7 +15,8 @@ const appRoutes: Routes = [
   {path: '', component: PropertyListComponent}, //This will set up paths with their respective appropriate components
   {path: 'rent-property', component: PropertyListComponent},
   {path: 'add-property', component: AddPropertyComponent},
-  {path: 'property-detail/:id', component: PropertyDetailComponent} //id will be a variable that's fetched and sent to the appropriate page. Any name is valid. Sendiong no variable seems to result in a blank page
+  {path: 'property-detail/:id', component: PropertyDetailComponent}, //id will be a variable that's fetched and sent to the appropriate page. Any name is valid. Sendiong no variable seems to result in a blank page
+  {path: '**', component: PropertyListComponent} // "**" es representativo de una pagina que no existe
 ]
 
 @NgModule({
