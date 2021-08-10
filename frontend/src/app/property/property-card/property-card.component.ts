@@ -1,4 +1,4 @@
-import { IProperty } from './../../iproperty';
+import { IProperty } from '../iproperty';
 import { Component, Input } from "@angular/core";
 
 //Component decorator will modify the behavior of the class but can also be used on properties of a class. It must also be declared in the app module
